@@ -7,7 +7,6 @@
     and filtering those arrays. 
 */
 
-
 //////////////////PROBLEM 1////////////////////
 /*  
     Create an object called `pizza` that has 6
@@ -32,7 +31,13 @@
 
 //CODE HERE
 
-
+const pizza = {
+  name: "cheese",
+  price: 5,
+  category: "personal",
+  popularity: 2,
+  tags: ["simple", "for kids", "under ten dollars"],
+};
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -44,6 +49,7 @@
 
 //CODE HERE
 
+console.log(pizza.popularity);
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +60,7 @@
 
 //CODE HERE
 
+console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -63,7 +70,8 @@
 */
 
 //CODE HERE
-
+const { price } = pizza;
+console.log(price);
 
 /*
     Fourth, and last, destructure the category
@@ -74,6 +82,8 @@
 
 //CODE HERE
 
+const { category } = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,7 +99,25 @@
 
 //CODE HERE
 
+class Food {
+  constructor(name, price, category, popularity, tags) {
+    this.name = name;
+    this.price = price;
+    this.category = category;
+    this.popularity = popularity;
+    this.tags = tags;
+  }
+}
 
+const food1 = new Food("salad", 5, "starters", 10, ["healthy", "inexpensive"]);
+const food2 = new Food("wings", 8, "starters", 3, ["hearty", "fried"]);
+const food3 = new Food("mac-n-cheese", 10, "entrees", 9, [
+  "hearty",
+  "kid-friendly",
+]);
+
+let foodArr = [];
+foodArr.push(food1, food2, food3);
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -106,8 +134,6 @@
 //CODE HERE
 
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
-
-
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -149,7 +175,6 @@
 */
 
 //CODE HERE
-
 
 /*
     Invoke the `filterByProperty` function passing
