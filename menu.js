@@ -133,7 +133,7 @@ foodArr.push(food1, food2, food3);
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((food) => food[tags].includes("healthy"));
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -175,6 +175,16 @@ foodArr.push(food1, food2, food3);
 */
 
 //CODE HERE
+
+const filterByProperty = (property, number, type) => {
+    let filtered = foodArr.filter(type => {
+        if(type === 'above') {
+            return number
+        } else {
+            return
+        }
+    return filtered
+}
 
 /*
     Invoke the `filterByProperty` function passing
