@@ -70,7 +70,7 @@ empOne.getSchedule();
 //CODE HERE
 
 const empTwo = { ...empOne };
-empTwo[name] = "Nick";
+empTwo.name = "Nick";
 
 //////////////////PROBLEM 2////////////////////
 /*  

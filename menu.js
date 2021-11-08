@@ -177,14 +177,13 @@ const filteredFood = foodArr.filter((food) => food[tags].includes("healthy"));
 //CODE HERE
 
 const filterByProperty = (property, number, type) => {
-    let filtered = foodArr.filter(type => {
+    return filtered = foodArr.filter((property, number, type) => {
         if(type === 'above') {
-            return number
+            return property > number
         } else {
-            return
-        }
-    return filtered
-}
+            return property < number
+        }        
+},
 
 /*
     Invoke the `filterByProperty` function passing
@@ -194,3 +193,5 @@ const filterByProperty = (property, number, type) => {
 */
 
 //CODE HERE
+
+console.log(filterByProperty(price, 10, below))
