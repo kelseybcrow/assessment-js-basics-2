@@ -36,6 +36,7 @@ const pizza = {
   price: 5,
   category: "personal",
   popularity: 2,
+  rating: 5,
   tags: ["simple", "for kids", "under ten dollars"],
 };
 
@@ -115,9 +116,11 @@ const food3 = new Food("mac-n-cheese", 10, "entrees", 9, [
   "hearty",
   "kid-friendly",
 ]);
+const food4 = new Food('fried chicken', 9, 'entree', 5, ['fried', 'hearty', 'classics'])
+const food5 = new Food('ice cream', 4, 'dessert', 7, ['dessert', 'sweet'])
 
 let foodArr = [];
-foodArr.push(food1, food2, food3);
+foodArr.push(food1, food2, food3, food4, food5);
 
 //////////////////PROBLEM 4////////////////////
 /* 
