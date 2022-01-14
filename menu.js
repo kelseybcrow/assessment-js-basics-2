@@ -116,8 +116,12 @@ const food3 = new Food("mac-n-cheese", 10, "entrees", 9, [
   "hearty",
   "kid-friendly",
 ]);
-const food4 = new Food('fried chicken', 9, 'entree', 5, ['fried', 'hearty', 'classics'])
-const food5 = new Food('ice cream', 4, 'dessert', 7, ['dessert', 'sweet'])
+const food4 = new Food("fried chicken", 9, "entree", 5, [
+  "fried",
+  "hearty",
+  "classics",
+]);
+const food5 = new Food("ice cream", 4, "dessert", 7, ["dessert", "sweet"]);
 
 let foodArr = [];
 foodArr.push(food1, food2, food3, food4, food5);
@@ -136,7 +140,9 @@ foodArr.push(food1, food2, food3, food4, food5);
 
 //CODE HERE
 
-const filteredFood = foodArr.filter((food) => food[tags].includes("healthy"));
+const filteredFood = foodArr.filter((food) => food.tags.includes("healthy"));
+
+console.log(filteredFood);
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -179,15 +185,17 @@ const filteredFood = foodArr.filter((food) => food[tags].includes("healthy"));
 
 //CODE HERE
 
-const filterByProperty = foodArr.filter((property, number, type) => {
-    const filteredArr = []
-        if(type === 'above') {
-            filteredArr.push(foodArr[property] > number)
-        } else if(type = 'below') {
-            filteredArr.push(foodArr[property] < number)
-        }     
-        return filteredArr   
-},
+const filterByProperty = (property, number, type) => {
+  const filteredArr = foodArr.filter((elem) => {
+    if (type === "above") {
+      return elem[property] > number;
+    } else {
+      return elem[property] < number;
+    }
+  });
+
+  return filteredArr;
+};
 
 /*
     Invoke the `filterByProperty` function passing
@@ -198,4 +206,4 @@ const filterByProperty = foodArr.filter((property, number, type) => {
 
 //CODE HERE
 
-console.log(filterByProperty(foodArr.filter('price', 10, 'below')))
+console.log(filterByProperty("price", 10, "below"));
