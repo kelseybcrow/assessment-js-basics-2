@@ -91,6 +91,9 @@ const canWeDeliver2 = (zipCode) => {
   }
 };
 
+console.log(canWeDeliver2(85205));
+console.log(canWeDeliver2(83705));
+
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -126,7 +129,7 @@ const deals = [
 
 //CODE HERE
 
-deals[0].title.replace("15", "10");
+console.log(deals[0].title.replace("15", "10"));
 
 /*
     The restaurant is going to continue its
@@ -142,4 +145,4 @@ deals[0].title.replace("15", "10");
 */
 
 //CODE HERE
-deals[1].desc.replace("March", "April").trim();
+console.log(deals[1].desc.replace("March", "April").trim());
