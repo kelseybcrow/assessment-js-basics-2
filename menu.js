@@ -179,13 +179,14 @@ const filteredFood = foodArr.filter((food) => food[tags].includes("healthy"));
 
 //CODE HERE
 
-const filterByProperty = (property, number, type) => {
-    return filtered = foodArr.filter((property, number, type) => {
+const filterByProperty = foodArr.filter((property, number, type) => {
+    const filteredArr = []
         if(type === 'above') {
-            return property > number
-        } else {
-            return property < number
-        }        
+            filteredArr.push(foodArr[property] > number)
+        } else if(type = 'below') {
+            filteredArr.push(foodArr[property] < number)
+        }     
+        return filteredArr   
 },
 
 /*
@@ -197,4 +198,4 @@ const filterByProperty = (property, number, type) => {
 
 //CODE HERE
 
-console.log(filterByProperty(price, 10, below))
+console.log(filterByProperty(foodArr.filter('price', 10, 'below')))
