@@ -34,8 +34,9 @@ const cart = [
 
 //CODE HERE
 
-const reducer = (acc, curr) => acc + curr;
-const summedPrice = cart.reduce(reducer);
+const reducer = (acc, curr) => acc + curr.price;
+const summedPrice = cart.reduce(reducer, 0);
+console.log(summedPrice);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -60,6 +61,7 @@ const calcFinalPrice = (cartTotal, couponValue, tax) => {
   return cartTotal;
 };
 
+console.log(calcFinalPrice(100, 20, 0.06));
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -105,3 +107,4 @@ class Customer {
 }
 
 let customer1 = new Customer("Sally", "203-444-5555", true, "Visa");
+console.log(customer1);
